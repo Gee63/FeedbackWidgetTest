@@ -25,6 +25,7 @@
 
     /*feedback widget JS --Start*/
 
+    $('.modal').modal();
 
     /*feedback widget JS --End*/
 
