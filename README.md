@@ -43,16 +43,27 @@ Have you  attended one of these events before?
 If yes what was your experience?
 Add a night mode for site. More gimmicky but just for fun. (inject CSS for night and day mode)
 
-*NB – try using radio, checkboxes, range sliders to make the process as quick and simple as possible. This process must avoid irritating the user as much as possible!!
+*NB – try using radio, checkboxes, range sliders to make the process as quick and simple as possible. This process must avoid irritating the user as much as possible.
+
 
 ##Conditions for showing feedback form:
 
 Has the user scrolled to the bottom of the page? True/false
 Has the user clicked on the buy tickets button? True/false
 How long has the user been on the site? If more than 1 minute show feedback form.
-Allow closing of form but show them how they can find it again.
+Allow closing of form but explain to them how they can find it again.
 Form button will be displayed in the form of a fob (floating action button) in the bottom right hand side of the screen.
-If the user has closed the form, the fob will animate every few seconds as a  gentle reminder that it is still there and wants your feedback.
+
+We will achieve a less annoying experience by only showing the form after a user has seen the whole site ie: scrolled to the bottom of the page. 
+If the user declines to give feed back on the first attempt the form will close and the floating button will be visible in the bottom right hand corner of the screen.
+
+After the form is declined the first time there will be a timer set to trigger a subtle bounce animation on the feedback button. Reminding the user that we want their feedback
+without being too aggressive about it.
+
+Consider adding a checkbox for 'don't ask again' which will hide the button and form for the duration of the session.
+
+Consider 
+
 Once form is submitted the animation will stop / the fob will disappear
 Form submission can be stored as a google analytics / google tag manger event in the following structure.
 -	Category -> Feedback Form
