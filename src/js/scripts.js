@@ -5,8 +5,6 @@
   $(function () {
     // FireShell
 
-
-
       console.log('ready');
 
       $(window).load(function() {
@@ -23,6 +21,13 @@
       $('.slider').slider({full_width: true});
 
       $('.parallax').parallax();
+
+
+    /*feedback widget JS --Start*/
+
+
+    /*feedback widget JS --End*/
+
 
 
   });

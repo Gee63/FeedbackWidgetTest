@@ -32,3 +32,43 @@
 └── .travis.yml
 ````
 
+##Concept:
+
+Feedback form for a single paged parallax event website.
+
+Ask user for feedback on the event. Artist selection, venue, date and time, value for money. These questions will have a star/number rating that the user can select.
+Have you  attended one of these events before?
+If yes what was your experience?
+Add a night mode for site. More gimmicky but just for fun. (inject CSS for night and day mode)
+
+*NB – try using radio, checkboxes, range sliders to make the process as quick and simple as possible. This process must avoid irritating the user as much as possible!!
+
+##Conditions for showing feedback form:
+
+Has the user scrolled to the bottom of the page? True/false
+Has the user clicked on the buy tickets button? True/false
+How long has the user been on the site? If more than 1 minute show feedback form.
+Allow closing of form but show them how they can find it again.
+Form button will be displayed in the form of a fob (floating action button) in the bottom right hand side of the screen.
+If the user has closed the form, the fob will animate every few seconds as a  gentle reminder that it is still there and wants your feedback.
+Once form is submitted the animation will stop / the fob will disappear
+Form submission can be stored as a google analytics / google tag manger event in the following structure.
+-	Category -> Feedback Form
+-	Action -> This will be a custom variable set to the title of the question. Eg: What do you r rate our artist selection?
+-	Label -> This will be set to another custom variable which will capture the rating that the user has given to the actions question. Eg the number / star rating.
+-	Custom dimensions can be created for the users feedback regarding their experience. Character count limit must be set!!
+
+The benefits of capturing data via Google Analytics is that once data is received you can set up custom dashboards to represent your data in a graph which is easily for anyone to understand and see patterns.
+
+Add tracking for:
+-	How many times form was displayed
+-	How many times the form was closed
+-	How many times the fob was clicked
+-	How many times the form was completed / submitted
+
+##Design:
+
+Using material design concepts for fast implementation and slick look and feel.
+Consider using collapsible accordions. Try not to overwhelm user with too many questions. Accordion could help in this regard when there are a lot of questions
+
+*feedback icon sucks :( But will suffice for test purposes.
