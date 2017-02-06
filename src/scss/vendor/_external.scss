@@ -124,26 +124,9 @@ body{
         }
       }
     }
-    .fixed-action-btn{
 
-      opacity: 0.8;
 
-      &:hover{
-        opacity: 1;
-      }
 
-      a{
-        i{
-          font-size: 34px;
-        }
-
-        svg{
-          vertical-align: middle;
-        }
-      }
-    }
-
-    .mobile-feedback{display: none;}
 
 
 
@@ -495,18 +478,12 @@ nav .nav-wrapper{
 
 
 @media (max-width: 992px){
-
-  .site .content .mobile-feedback{display: block;}
   .nav-wrapper {
 
     .brand-logo {
       opacity: 1;
       margin-left:0;
     }
-  }
-
-  .site .content .fixed-action-btn{
-    display: none;
   }
 
   .site .content .share-desktop{
@@ -517,7 +494,7 @@ nav .nav-wrapper{
     left:0;
 
     ul{
-      width:190px;
+      width:150px;
       margin: auto;
       li{
         opacity: 1;
@@ -525,9 +502,7 @@ nav .nav-wrapper{
     }
   }
 
-  .feedback-btn{
-    display: block;
-  }
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -568,7 +543,28 @@ nav .nav-wrapper{
 }
 
 
+
 /*feedback*/
+
+.fixed-action-btn{
+  bottom: 15px;
+  right: 15px;
+  opacity: 0.8;
+
+  &:hover{
+    opacity: 1;
+  }
+
+  a{
+
+    img{
+      width: 40px;
+      height: 40px;
+      margin-top: 8px;
+    }
+
+  }
+}
 
 .btn-floating{
   text-align: center;
@@ -578,14 +574,33 @@ nav .nav-wrapper{
   animation: bounce 2s infinite;
 }
 
- @-webkit-keyframes bounce{
+@media (max-width: 992px){
+  .fixed-action-btn{
+    a{
+      width: 40px !important;
+      height: 40px !important;
+
+      img{
+        width: 35px;
+        height: 35px;
+        margin-top: 2px;
+      }
+    }
+  }
+  .feedback-btn{
+    display: block;
+  }
+
+}
+
+@-webkit-keyframes bounce{
   0%, 20%, 50%, 80%, 100% {
-  transform: translateY(0);
+    transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-8px);
   }
   60% {
-    transform:translateY(-15px);
+    transform:translateY(-3px);
   }
 }

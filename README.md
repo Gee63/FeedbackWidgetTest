@@ -32,6 +32,8 @@
 └── .travis.yml
 ````
 
+App folder container deployable / working files.
+
 ##Concept:
 
 Feedback form for a single paged parallax event website.
