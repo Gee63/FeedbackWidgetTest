@@ -185,6 +185,7 @@
         question2Val = $('#venueSelectionRate').val(),
         question3Text = $('.collapsible-body .question3').text(),
         question3Val = attendedSwitchValue.toString(),
+        question3TextBox = $('#textarea1').val(),
         question4Text = $('.collapsible-body .question4').text(),
         question4Val = $('#valueSelect').val();
 
@@ -203,6 +204,7 @@
       dataLayer.push({
         'dl-action': question3Text,
         'dl-label': question3Val,
+        'dl-event-comments': question3TextBox,
         'event': 'feedback_form_submit'
       });
 
