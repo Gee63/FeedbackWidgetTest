@@ -1,38 +1,4 @@
-## Scaffolding
-
-````
-├── app
-│   ├── apple-touch-icon-precomposed.png
-│   ├── assets
-│   │   ├── css
-│   │   ├── fonts
-│   │   ├── img
-│   │   └── js
-│   ├── favicon.ico
-│   └── index.html
-├── src
-│   ├── js
-│   │   └── scripts.js
-│   └── scss
-│       ├── mixins
-│       ├── modules
-│       ├── partials
-│       ├── vendor
-│       └── style.scss
-├── docs
-├── grunt-build.command
-├── grunt-build.bat
-├── grunt-dev.command
-├── grunt-dev.bat
-├── package.json
-├── README.md
-├── .editorconfig
-├── .gitignore
-├── .jshintrc
-└── .travis.yml
-````
-
-App folder container deployable / working files.
+App folder contains deployable / working files.
 
 ##Concept:
 
@@ -57,15 +23,13 @@ Form button will be displayed in the form of a fob (floating action button) in t
 We will achieve a less annoying experience by only showing the form after a user has seen the whole site ie: scrolled to the bottom of the page. 
 If the user declines to give feed back on the first attempt the form will close and the floating button will be visible in the bottom right hand corner of the screen.
 
-After the form is declined the first time there will be a timer set to trigger a subtle bounce animation on the feedback button. Reminding the user that we want their feedback
+After the form is declined the first time there will be a timer set to trigger a subtle bounce animation on the feedback button (every 15 seconds). Reminding the user that we want their feedback
 without being too aggressive about it.
 
 Consider adding a checkbox for 'don't ask again' which will hide the button and form for the duration of the session.
 
-Consider 
-
 Once form is submitted the animation will stop / the fob will disappear
-Form submission can be stored as a google analytics / google tag manger event in the following structure.
+Form submission can be stored as a google analytics using google tag manger events in the following structure.
 -	Category -> Feedback Form
 -	Action -> This will be a custom variable set to the title of the question. Eg: What do you r rate our artist selection?
 -	Label -> This will be set to another custom variable which will capture the rating that the user has given to the actions question. Eg the number / star rating.

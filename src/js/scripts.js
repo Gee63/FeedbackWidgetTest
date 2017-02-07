@@ -173,6 +173,8 @@
       $('.modal-footer .closeButton').removeClass('hide');
       submitButton.addClass('hide');
       $('.notNowButton').addClass('hide');
+      $('.fixed-action-btn').addClass('hide');
+
     }
     /*track users answers on submit*/
     $('.feedBackSubmit').on('click', function(){
@@ -213,9 +215,6 @@
      new Thankyou();
 
     });
-
-
-
 
     /*feedback widget JS --End*/
 
