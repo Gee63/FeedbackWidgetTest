@@ -1,4 +1,12 @@
+#Feedback widget
+
 App folder contains deployable / working files.
+feedback-plugin folder contains script, css and html
+
+##Dependencies
+
+-[materializecss](materializecss.com)
+-jQuery
 
 ##Concept:
 
