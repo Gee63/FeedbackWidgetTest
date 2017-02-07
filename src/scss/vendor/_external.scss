@@ -623,6 +623,11 @@ nav .nav-wrapper{
       }
 
     }
+    .feedback-thankyou{
+      &.hide{
+        display: none;
+      }
+    }
     .modal-footer{
       .submitButton{
         &.hide{
@@ -634,6 +639,17 @@ nav .nav-wrapper{
           display: none;
         }
       }
+      .notNowButton{
+        &.hide{
+          display: none;
+        }
+      }
+      .closeButton{
+        &.hide{
+          display: none;
+        }
+      }
+
     }
   }
 

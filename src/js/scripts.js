@@ -29,12 +29,15 @@
       fabButton = $('.fixed-action-btn'),
       feedbackContainer = $('.feedback-container'),
       feedbackRequest = $('.feedback-request'),
+      feedbackThankyou = $('.feedback-thankyou'),
       agreeButton = $('.agreeButton'),
       submitButton = $('.submitButton'),
       scrolledToBottom = false,
       bounceInterval,
       scrolledToBottomCount = 0,
       modalClosedCount = 0;
+
+
 
 
     /*modal settings*/
@@ -51,6 +54,10 @@
 
           /*clear animation if interval is set*/
           clearInterval(bounceInterval);
+
+          dataLayer.push({
+            'event':'feedback_form_show'
+          });
 
         },
         complete: function () {
@@ -118,13 +125,18 @@
       feedbackRequest.addClass('hide');
       agreeButton.addClass('hide');
       submitButton.removeClass('hide');
+
+      /*track agree button click*/
+      dataLayer.push({
+        'event':'feedback_form_agree'
+      });
+
     });
 
     /*question selection values*/
     var attendedSwitchValue = false;
 
-    $('#artistSelectionRate').val();
-    $('#venueSelectionRate').val();
+
     $('#attendedSwitch').prop('checked', false);
     $('#attendedSwitch .lever').on('click', function () {
       attendedSwitchValue = !attendedSwitchValue;
@@ -146,6 +158,62 @@
 
     /*initialize select dropdown*/
     $('select').material_select();
+
+    /*track not now button*/
+    $('.notNowButton').on('click', function(){
+      dataLayer.push({
+        'event':'feedback_form_not_now'
+      });
+    });
+
+    /*after submit show thank you message*/
+    function Thankyou(){
+      feedbackContainer.addClass('hide');
+      feedbackThankyou.removeClass('hide');
+      $('.modal-footer .closeButton').removeClass('hide');
+      submitButton.addClass('hide');
+      $('.notNowButton').addClass('hide');
+    }
+    /*track users answers on submit*/
+    $('.feedBackSubmit').on('click', function(){
+
+      var question1Text = $('.collapsible-body .question1').text(),
+      question1Val = $('#artistSelectionRate').val(),
+        question2Text = $('.collapsible-body .question2').text(),
+        question2Val = $('#venueSelectionRate').val(),
+        question3Text = $('.collapsible-body .question3').text(),
+        question3Val = attendedSwitchValue.toString(),
+        question4Text = $('.collapsible-body .question4').text(),
+        question4Val = $('#valueSelect').val();
+
+      dataLayer.push({
+        'dl-action': question1Text,
+        'dl-label': question1Val,
+        'event': 'feedback_form_submit'
+      });
+
+      dataLayer.push({
+        'dl-action': question2Text,
+        'dl-label': question2Val,
+        'event': 'feedback_form_submit'
+      });
+
+      dataLayer.push({
+        'dl-action': question3Text,
+        'dl-label': question3Val,
+        'event': 'feedback_form_submit'
+      });
+
+      dataLayer.push({
+        'dl-action': question4Text,
+        'dl-label': question4Val,
+        'event': 'feedback_form_submit'
+      });
+
+     new Thankyou();
+
+    });
+
 
 
 
