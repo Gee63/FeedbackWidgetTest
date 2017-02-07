@@ -58,7 +58,7 @@
           /*add 1 to the count of modal being closed... we dont want constant animation incase users get annoyed*/
           modalClosedCount = modalClosedCount + 1;
 
-          if(modalClosedCount <= 1){
+          if (modalClosedCount <= 1) {
 
             /*add and remove the bounce animation to the floating action button*/
             bounceInterval = setInterval(function () {
@@ -104,21 +104,49 @@
     /*feedback accordion setup*/
     $('.collapsible').collapsible({
       accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-      onOpen: function(el) {
+      onOpen: function (el) {
         console.log('Open:' + el);
       }, // Callback for Collapsible open
-      onClose: function(el) {
+      onClose: function (el) {
         console.log('Closed: ' + el);
       } // Callback for Collapsible close
     });
 
     /*agree to give feedback*/
-    agreeButton.on('click', function(){
+    agreeButton.on('click', function () {
       feedbackContainer.removeClass('hide');
       feedbackRequest.addClass('hide');
       agreeButton.addClass('hide');
       submitButton.removeClass('hide');
     });
+
+    /*question selection values*/
+    var attendedSwitchValue = false;
+
+    $('#artistSelectionRate').val();
+    $('#venueSelectionRate').val();
+    $('#attendedSwitch').prop('checked', false);
+    $('#attendedSwitch .lever').on('click', function () {
+      attendedSwitchValue = !attendedSwitchValue;
+      $('#attendedSwitch').prop('checked', attendedSwitchValue);
+      /*console.log('attended before: ' + $('#attendedSwitch').prop('checked'));*/
+
+      /*initiate textbox*/
+      if(attendedSwitchValue){
+        /*console.log('remove hide');*/
+        $('#attendedTextArea').removeClass('hide');
+      }
+      else{
+        /*console.log('add hide');*/
+        $('#attendedTextArea').addClass('hide');
+      }
+
+    });
+
+
+    /*initialize select dropdown*/
+    $('select').material_select();
+
 
 
     /*feedback widget JS --End*/

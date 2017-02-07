@@ -670,7 +670,7 @@
         <li>
           <div class="collapsible-header"><i class="material-icons dp48">repeat</i>Question 3</div>
           <div class="collapsible-body"><p>Have you attended one of our events before?</p>
-            <div class="switch">
+            <div id="attendedSwitch" class="switch">
               <label>
                 Off
                 <input type="checkbox">
@@ -678,11 +678,29 @@
                 On
               </label>
             </div>
+
+            <div id="attendedTextArea" class="row hide" >
+              What did you think?
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                <label for="textarea1">Textarea</label>
+              </div>
+            </div>
+
           </div>
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons dp48">comment</i>Question 4</div>
-          <div class="collapsible-body"><span>Question 4</span></div>
+          <div class="collapsible-body valueSelect"><span>How would you rate the value for money?</span>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">I would pay more</option>
+                <option value="2">Well priced</option>
+                <option value="3">Over priced</option>
+              </select>
+            </div>
+          </div>
         </li>
       </ul>
     </div>

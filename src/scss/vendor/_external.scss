@@ -639,7 +639,38 @@ nav .nav-wrapper{
 
 }
 
+#attendedTextArea{
+  margin-top: 40px;
 
+  &.hide{
+    display: none;
+  }
+}
+
+.valueSelect{
+  overflow: visible
+}
+
+
+.select-wrapper{
+  z-index: 99;
+}
+
+.select-wrapper span.caret {
+  color: initial;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 10px;
+  margin: auto 0;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.select-wrapper input.select-dropdown{
+  font-size: 1.3rem;
+}
 
 @media (max-width: 992px){
   .fixed-action-btn{
