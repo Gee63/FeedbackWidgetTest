@@ -26,7 +26,6 @@ If the user declines to give feed back on the first attempt the form will close 
 After the form is declined the first time there will be a timer set to trigger a subtle bounce animation on the feedback button (every 15 seconds). Reminding the user that we want their feedback
 without being too aggressive about it.
 
-Consider adding a checkbox for 'don't ask again' which will hide the button and form for the duration of the session.
 
 Once form is submitted the animation will stop / the fob will disappear
 Form submission can be stored as a google analytics using google tag manger events in the following structure.
@@ -49,3 +48,14 @@ Using material design concepts for fast implementation and slick look and feel.
 Consider using collapsible accordions. Try not to overwhelm user with too many questions. Accordion could help in this regard when there are a lot of questions
 
 *feedback icon sucks :( But will suffice for test purposes.
+
+
+##Things to add
+
+- validation on submit. If all questions arent complete ask user to complete that question.
+- Add a cookie to the validation. If user has opened the form but not filled out the feedback customise a message to say hi returning visitor please take some time to give us your feedback.
+- consider auto closing an opening the questions to promote an easier flow.
+- add the day night mode
+- customise a feedback message based on where the user has clicked on the purchased tickets button. If purchases are done on the site we can can eccomerce tracking to 
+distinguish whether or not they have completed a ticket purchase.
+- Consider adding a checkbox for 'don't ask again' which will hide the button and form for the duration of the session.
