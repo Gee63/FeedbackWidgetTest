@@ -5,7 +5,8 @@ feedback-plugin folder contains script, css and html
 
 ##Dependencies
 
--[materializecss](materializecss.com)
+-[materializecss](www.materializecss.com)
+
 -jQuery
 
 ##Concept:
