@@ -23,7 +23,7 @@ Add a night mode for site. More gimmicky but just for fun. (inject CSS for night
 
 ##Conditions for showing feedback form:
 
-*NB - scrolled down to the botom of the page to activate the feedback form
+*NB - scroll down to the bottom of the page to activate the feedback form
 
 Has the user scrolled to the bottom of the page? True/false
 Has the user clicked on the buy tickets button? True/false
