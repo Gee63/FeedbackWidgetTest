@@ -551,6 +551,7 @@ nav .nav-wrapper{
 }
 
 /*feedback*/
+/*
 
 .fixed-action-btn{
   bottom: 15px;
@@ -718,3 +719,56 @@ nav .nav-wrapper{
     transform:translateY(-3px);
   }
 }
+
+@-moz-keyframes bounce{
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform:translateY(-3px);
+  }
+}
+
+@-ms-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+
+}
+
+
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+
+}
+
+@keyframes  bounce{
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform:translateY(-3px);
+  }
+}
+*/
+

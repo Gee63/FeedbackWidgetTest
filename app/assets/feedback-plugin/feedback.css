@@ -1,0 +1,165 @@
+/*feedback*/
+.fixed-action-btn {
+  bottom: 15px;
+  right: 15px;
+  opacity: 0.8;
+}
+.fixed-action-btn:hover {
+  opacity: 1;
+}
+.fixed-action-btn.hide {
+  bottom: -50px;
+}
+.fixed-action-btn a img {
+  width: 40px;
+  height: 40px;
+  margin-top: 8px;
+}
+
+.btn-floating {
+  text-align: center;
+}
+
+.bounce {
+  animation: bounce 2s;
+}
+
+#feedback.modal .modal-content .feedback-request.hide {
+  display: none;
+}
+#feedback.modal .modal-content .feedback-container .collapsible .collapsible-header {
+  line-height: 6rem;
+  height: 6rem;
+}
+#feedback.modal .modal-content .feedback-container .collapsible .collapsible-header i {
+  font-size: 3rem;
+  line-height: 6rem;
+  margin-right: 30px;
+}
+#feedback.modal .modal-content .feedback-container .collapsible .collapsible-body {
+  padding: 2rem;
+}
+#feedback.modal .modal-content .feedback-container .collapsible .collapsible-body p {
+  padding: 0;
+  padding-bottom: 1rem;
+}
+#feedback.modal .modal-content .feedback-container.hide {
+  display: none;
+}
+#feedback.modal .modal-content .feedback-thankyou.hide {
+  display: none;
+}
+#feedback.modal .modal-content .modal-footer .submitButton.hide {
+  display: none;
+}
+#feedback.modal .modal-content .modal-footer .agreeButton.hide {
+  display: none;
+}
+#feedback.modal .modal-content .modal-footer .notNowButton.hide {
+  display: none;
+}
+#feedback.modal .modal-content .modal-footer .closeButton.hide {
+  display: none;
+}
+
+#attendedTextArea {
+  margin-top: 40px;
+}
+#attendedTextArea.hide {
+  display: none;
+}
+
+.valueSelect {
+  overflow: visible;
+}
+
+.select-wrapper {
+  z-index: 99;
+}
+
+.select-wrapper span.caret {
+  color: initial;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 10px;
+  margin: auto 0;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.select-wrapper input.select-dropdown {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 992px) {
+  .fixed-action-btn a {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .fixed-action-btn a img {
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+  }
+
+  .feedback-btn {
+    display: block;
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+@-ms-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}

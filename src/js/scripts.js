@@ -23,7 +23,7 @@
     $('.parallax').parallax();
 
 
-    /*feedback widget JS --Start*/
+   /* *//*feedback widget JS --Start*//*
 
     var modal = $('.modal'),
       fabButton = $('.fixed-action-btn'),
@@ -40,7 +40,7 @@
 
 
 
-    /*modal settings*/
+    *//*modal settings*//*
     modal.modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
         opacity: 0.5, // Opacity of modal background
@@ -52,7 +52,7 @@
           console.log('Ready');
           console.log(modal, trigger);
 
-          /*clear animation if interval is set*/
+          *//*clear animation if interval is set*//*
           clearInterval(bounceInterval);
 
           dataLayer.push({
@@ -62,12 +62,12 @@
         },
         complete: function () {
           console.log('Closed');
-          /*add 1 to the count of modal being closed... we dont want constant animation incase users get annoyed*/
+          *//*add 1 to the count of modal being closed... we dont want constant animation incase users get annoyed*//*
           modalClosedCount = modalClosedCount + 1;
 
           if (modalClosedCount <= 1) {
 
-            /*add and remove the bounce animation to the floating action button*/
+            *//*add and remove the bounce animation to the floating action button*//*
             bounceInterval = setInterval(function () {
               if (fabButton.hasClass('bounce')) {
                 fabButton.removeClass('bounce');
@@ -83,7 +83,7 @@
       }
     );
 
-    /*check if user has scrolled to bottom*/
+    *//*check if user has scrolled to bottom*//*
     $(window).scroll(function () {
       if ($(window).scrollTop() + $(window).height() === $(document).height()) {
         console.log('bottom!');
@@ -92,10 +92,10 @@
         scrolledToBottom = true;
         scrolledToBottomCount = scrolledToBottomCount + 1;
 
-        /*we only want do force the popup once hence === 1*/
+        *//*we only want do force the popup once hence === 1*//*
         if (scrolledToBottom && scrolledToBottomCount === 1) {
 
-          /*set bounce animation to trigger every 15 seconds*/
+          *//*set bounce animation to trigger every 15 seconds*//*
           setTimeout(function () {
 
             $('.fixed-action-btn').removeClass('hide');
@@ -108,7 +108,7 @@
       }
     });
 
-    /*feedback accordion setup*/
+    *//*feedback accordion setup*//*
     $('.collapsible').collapsible({
       accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
       onOpen: function (el) {
@@ -119,21 +119,21 @@
       } // Callback for Collapsible close
     });
 
-    /*agree to give feedback*/
+    *//*agree to give feedback*//*
     agreeButton.on('click', function () {
       feedbackContainer.removeClass('hide');
       feedbackRequest.addClass('hide');
       agreeButton.addClass('hide');
       submitButton.removeClass('hide');
 
-      /*track agree button click*/
+      *//*track agree button click*//*
       dataLayer.push({
         'event':'feedback_form_agree'
       });
 
     });
 
-    /*question selection values*/
+    *//*question selection values*//*
     var attendedSwitchValue = false;
 
 
@@ -141,32 +141,32 @@
     $('#attendedSwitch .lever').on('click', function () {
       attendedSwitchValue = !attendedSwitchValue;
       $('#attendedSwitch').prop('checked', attendedSwitchValue);
-      /*console.log('attended before: ' + $('#attendedSwitch').prop('checked'));*/
+      *//*console.log('attended before: ' + $('#attendedSwitch').prop('checked'));*//*
 
-      /*initiate textbox*/
+      *//*initiate textbox*//*
       if(attendedSwitchValue){
-        /*console.log('remove hide');*/
+        *//*console.log('remove hide');*//*
         $('#attendedTextArea').removeClass('hide');
       }
       else{
-        /*console.log('add hide');*/
+        *//*console.log('add hide');*//*
         $('#attendedTextArea').addClass('hide');
       }
 
     });
 
 
-    /*initialize select dropdown*/
+    *//*initialize select dropdown*//*
     $('select').material_select();
 
-    /*track not now button*/
+    *//*track not now button*//*
     $('.notNowButton').on('click', function(){
       dataLayer.push({
         'event':'feedback_form_not_now'
       });
     });
 
-    /*after submit show thank you message*/
+    *//*after submit show thank you message*//*
     function Thankyou(){
       feedbackContainer.addClass('hide');
       feedbackThankyou.removeClass('hide');
@@ -176,7 +176,7 @@
       $('.fixed-action-btn').addClass('hide');
 
     }
-    /*track users answers on submit*/
+    *//*track users answers on submit*//*
     $('.feedBackSubmit').on('click', function(){
 
       var question1Text = $('.collapsible-body .question1').text(),
@@ -218,7 +218,7 @@
 
     });
 
-    /*feedback widget JS --End*/
+    *//*feedback widget JS --End*/
 
   });
 
