@@ -27,6 +27,10 @@
 
     var modal = $('.modal'),
       fabButton = $('.fixed-action-btn'),
+      feedbackContainer = $('.feedback-container'),
+      feedbackRequest = $('.feedback-request'),
+      agreeButton = $('.agreeButton'),
+      submitButton = $('.submitButton'),
       scrolledToBottom = false,
       bounceInterval,
       scrolledToBottomCount = 0,
@@ -106,6 +110,14 @@
       onClose: function(el) {
         console.log('Closed: ' + el);
       } // Callback for Collapsible close
+    });
+
+    /*agree to give feedback*/
+    agreeButton.on('click', function(){
+      feedbackContainer.removeClass('hide');
+      feedbackRequest.addClass('hide');
+      agreeButton.addClass('hide');
+      submitButton.removeClass('hide');
     });
 
 

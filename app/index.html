@@ -622,50 +622,80 @@
     </div>
 
 
-    <!--include this html on your page-->
-    <!--fab-->
-
-      <div class="fixed-action-btn hide">
-        <a href="#feedback" data-target="feedback" class="btn-floating btn-large blue">
-          <img viewBox="0 0 24 24" src="assets/png/feedback.png">
-
-        </a>
-      </div>
 
 
-    <!-- feedback Modal Structure -->
-    <div id="feedback" class="modal">
-      <div class="modal-content">
-        <h3>Feedback</h3>
+  </div>
+</div>
 
-        <p>PLease take a moment to give us your feedback. If you are not ready to give it to us you can always click on
-          the blue feedback button at any point.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class=" agreeButton modal-action waves-effect waves-green btn-flat">Agree</a>
-        <a href="#!" class=" notNowButton modal-action modal-close waves-effect waves-green btn-flat">not now</a>
-      </div>
+<!--include this html on your page-->
+<!--fab-->
 
-      <div class="feedback-container">
-        <ul class="collapsible" data-collapsible="accordion">
-          <li>
-            <div class="collapsible-header"><i class="material-icons dp48">list</i>First</div>
-            <div class="collapsible-body"><span><h3>Question 1</h3></span></div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="material-icons dp48">list</i>Second</div>
-            <div class="collapsible-body"><span><h3>Question 2</h3></span></div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="material-icons dp48">list</i>Third</div>
-            <div class="collapsible-body"><span><h3>Question 3</h3></span></div>
-          </li>
-        </ul>
-      </div>
+<div class="fixed-action-btn hide">
+  <a href="#feedback" data-target="feedback" class="btn-floating btn-large blue">
+    <img viewBox="0 0 24 24" src="assets/png/feedback.png">
 
+  </a>
+</div>
+
+
+<!-- feedback Modal Structure -->
+<div id="feedback" class="modal">
+  <div class="modal-content">
+    <div class="feedback-request">
+      <h3>Feedback</h3>
+
+      <p>PLease take a moment to give us your feedback. If you are not ready to give it to us you can always click on
+        the blue feedback button at any point.</p>
+    </div>
+
+
+    <div class="feedback-container hide">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li class="active">
+          <div class="collapsible-header active"><i class="material-icons dp48">thumbs_up_down</i>Question 1</div>
+          <div class="collapsible-body"><p>How would you rate our artist selection? where 1 is bad and 10 is excellent.</p>
+            <p class="range-field">
+              <input type="range" id="artistSelectionRate" min="0" max="10" />
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons dp48">grade</i>Question 2</div>
+          <div class="collapsible-body"><p>How would you rate our venue selection. Where 1 is bad and 10 is excellent.</p>
+            <p class="range-field">
+              <input type="range" id="venueSelectionRate" min="0" max="10" />
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons dp48">repeat</i>Question 3</div>
+          <div class="collapsible-body"><p>Have you attended one of our events before?</p>
+            <div class="switch">
+              <label>
+                Off
+                <input type="checkbox">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons dp48">comment</i>Question 4</div>
+          <div class="collapsible-body"><span>Question 4</span></div>
+        </li>
+      </ul>
     </div>
 
   </div>
+  <div class="modal-footer">
+    <a href="#!" class=" submitButton modal-action waves-effect waves-green btn-flat hide">Submit</a>
+    <a href="#!" class=" agreeButton modal-action waves-effect waves-green btn-flat">Agree</a>
+    <a href="#!" class=" notNowButton modal-action modal-close waves-effect waves-green btn-flat">not now</a>
+  </div>
+
+
+
 </div>
 
 
